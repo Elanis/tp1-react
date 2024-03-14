@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 
 import Contact from '../Contact';
+import Energie from '../Energie';
 import Footer from '../Footer';
 import Header from '../Header';
 import Home from '../Home';
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: '/contact',
 				element: <Contact />,
+			},
+			{
+				path: '/energie',
+				element: <Energie />,
 			},
 			{
 				path: '/weather',
