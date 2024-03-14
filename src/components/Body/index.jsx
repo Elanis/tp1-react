@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './index.css';
 
 export default function Body() {
 	const [count, setCount] = useState(0);
+	const [count2, setCount2] = useState(0);
+
+	useEffect(() => {
+		document.title = `(${count2}) Application React`;
+	}, [count2]);
 
 	const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
 	const elements = text.split(' ');
@@ -17,9 +22,11 @@ export default function Body() {
 	return (
 		<div className="body">
 			<p>Compteur: {count}</p>
+			<p>Compteurs: {count + count2}</p>
 
 			<input type="button" onClick={() => setCount((currCount) => currCount + 1)} value="Plus!" />
 			<input type="button" onClick={() => setCount(monTraitement)} value="Plus (l'autre)!" />
+			<input type="button" onClick={() => setCount2((currCount) => currCount + 1)} value="Plus (count2)!" />
 
 			<ul>
 				{elements.map((element, i) => <li key={i}>{element}</li>)}
