@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 
 import monTraitementPourBody from '../../business/monTraitementPourBody.js';
+import useWindowDimensions from '../../hooks/useWindowDimensions.js';
 
 import './index.css';
 
 export default function Body() {
 	const [count, setCount] = useState(0);
 	const [count2, setCount2] = useState(0);
+
+	const { width, height } = useWindowDimensions();
 
 	useEffect(() => {
 		document.title = `(${count2}) Application React`;
@@ -19,6 +22,8 @@ export default function Body() {
 		<div className="body">
 			<p>Compteur: {count}</p>
 			<p>Compteurs: {count + count2}</p>
+
+			<p>Taille: {width}x{height}</p>
 
 			<input type="button" onClick={() => setCount((currCount) => currCount + 1)} value="Plus!" />
 			<input type="button" onClick={() => setCount(monTraitementPourBody)} value="Plus (l'autre)!" />
