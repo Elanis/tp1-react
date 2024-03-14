@@ -1,3 +1,5 @@
 export default function Contact() {
-	return 'Un texte random';
+	return (
+		<p>Un text random</p>
+	);
 }

@@ -5,7 +5,7 @@ import useWindowDimensions from '../../hooks/useWindowDimensions.js';
 
 import './index.css';
 
-export default function Body() {
+export default function Home() {
 	const [count, setCount] = useState(0);
 	const [count2, setCount2] = useState(0);
 

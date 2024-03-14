@@ -3,20 +3,30 @@ import {
 	RouterProvider,
 } from 'react-router-dom';
 
-import App from '../App';
 import Contact from '../Contact';
+import Footer from '../Footer';
+import Header from '../Header';
+import Home from '../Home';
+import Layout from '../Layout';
 
 const router = createBrowserRouter([
 	{
-		path: '/',
-		element: <App />,
-	},
-	{
-		path: '/contact',
-		element: <Contact />,
-	},
+	    element: <Layout />,
+	    children: [
+			{
+				path: '/',
+				element: <Home />,
+			},
+			{
+				path: '/contact',
+				element: <Contact />,
+			},
+		]
+	}
 ]);
 
 export default function Router() {
-	return (<RouterProvider router={router} />);
+	return (
+		<RouterProvider router={router} />
+	);
 }

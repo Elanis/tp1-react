@@ -3,3 +3,13 @@
 	padding: 1rem;
 	width: 100vw;
 }
+
+.header ul {
+	list-style: none;
+	padding: 0;
+}
+
+.header li {
+	display: inline-block;
+	padding-right: 1rem;
+}
