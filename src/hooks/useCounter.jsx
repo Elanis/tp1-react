@@ -1,10 +1,14 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const CounterContext = createContext();
 
 export function CounterContextProvider({ children }) {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = useState(parseInt(localStorage.counter, 10) || 0);
 
+	useEffect(() => {
+		localStorage.counter = count;
+	}, [count]);
+	
 	return (
 		<CounterContext.Provider value={{count, setCount}}>
 			{children}
