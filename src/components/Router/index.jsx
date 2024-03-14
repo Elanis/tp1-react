@@ -8,6 +8,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Home from '../Home';
 import Layout from '../Layout';
+import Weather from '../Weather';
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 				path: '/contact',
 				element: <Contact />,
 			},
+			{
+				path: '/weather',
+				element: <Weather />,
+			}
 		]
 	}
 ]);

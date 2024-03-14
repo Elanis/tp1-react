@@ -14,6 +14,7 @@ export default function Header({ name }) {
 			<ul>
 				<li><Link to={'/'}>Home</Link></li>
 				<li><Link to={'/contact'}>Contact</Link></li>
+				<li><Link to={'/weather'}>Weather</Link></li>
 			</ul>
 			{sentence} !
 		</div>
