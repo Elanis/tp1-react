@@ -1,12 +1,11 @@
 import { useCounter } from '../../hooks/useCounter.jsx';
 
+import View from './view.jsx';
+
 export default function Contact() {
 	const count = useCounter();
 
 	return (
-		<>
-			<p>Un text random</p>
-			<p>{count}</p>
-		</>
+		<View count={count} />
 	);
 }
