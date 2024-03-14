@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
 
 import monTraitementPourBody from '../../business/monTraitementPourBody.js';
+
+import { useCounter, useCounterSetter } from '../../hooks/useCounter.jsx';
 import useWindowDimensions from '../../hooks/useWindowDimensions.js';
 
 import './index.css';
 
 export default function Home() {
-	const [count, setCount] = useState(0);
+	const count = useCounter();
+	const setCount = useCounterSetter();
+
 	const [count2, setCount2] = useState(0);
 
 	const { width, height } = useWindowDimensions();
