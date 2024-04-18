@@ -5,6 +5,7 @@ import {
 
 import Contact from '../Contact';
 import Energie from '../Energie';
+import Formulaire from '../Formulaire';
 import Footer from '../Footer';
 import Header from '../Header';
 import Home from '../Home';
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
 			{
 				path: '/weather',
 				element: <Weather />,
+			}, {
+				path: '/formulaire',
+				element: <Formulaire />,
 			}
 		]
 	}
